@@ -23,6 +23,7 @@ Dependencies required:
 5. jsonwebtoken
 6. mongoose
 7. axios
+8. config
 
 
 Dev Dependencies:

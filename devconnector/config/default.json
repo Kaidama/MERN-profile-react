@@ -1,0 +1,3 @@
+{
+    "mongoURI": "mongodb+srv://jlai:jlai@devconnector-kiodc.mongodb.net/test?retryWrites=true&w=majority"
+}
