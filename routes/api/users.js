@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 //@desc Register User
 //@routes POST api/users
 router.post('/', (req, res) => {
-    console.log(`: `, req.body);
+    console.log(`req.body: `, req.body);
     
     res.send('User Route')
 })
