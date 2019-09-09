@@ -1,0 +1,19 @@
+{
+  "name": "mern-profile-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaidama/MERN-profile-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kaidama/MERN-profile-react/issues"
+  },
+  "homepage": "https://github.com/Kaidama/MERN-profile-react#readme"
+}
