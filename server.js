@@ -1,11 +1,9 @@
 const express = require("express");
-
 const mongoose = require('mongoose')
+const path = require('path')
 require('dotenv').config()
 
 const app = express();
-
-app.get("/", (req, res) => res.send("API poop"));
 
 // connect to MONGODB
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true })
@@ -13,6 +11,15 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true })
 )
 .catch(error => console.log(`error: `, error)
 )
+app.get("/", (req, res) => res.send("API poop"));
+
+//routes
+app.use('/api/users', require('./routes/api/users'))
+app.use('/api/auth', require('./routes/api/auth'))
+app.use('/api/profile', require('./routes/api/profile'))
+app.use('/api/post', require('./routes/api/post'))
+
+
 
 
 
