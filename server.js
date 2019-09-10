@@ -1,24 +1,26 @@
 const express = require("express");
 const mongoose = require("mongoose");
-
-
+const path = require("path");
 require("dotenv").config();
 
 const app = express();
 
 // connect to MONGODB
 mongoose
-  .connect(process.env.MONGO_URI, {
+  .connect(process.env.MONGO_URI, { 
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
-  })
-  .then(result => console.log("Connected to MONGODB ATLAS"))
+   })
+  .then(result =>
+    console.log('Connected to MONGODB ATLAS')
+  )
   .catch(error => console.log(`error: `, error));
 
-app.get("/", (req, res) => res.send("API poop"));
+  app.get("/", (req, res) => res.send("API poop"));
 
-//INITIALLZE MIDDLEWARE - replaces bodyparser because express comes with one already
+//INITIALLZE MIDDLEWARE
+//replaces bodyparser because express comes with one already
 app.use(express.json({ extended: false }));
 
 //API ROUTES

@@ -5,12 +5,9 @@ const { validationResult } = require("express-validator");
 const User = require("../../models/User");
 //@desc test user route
 //@route GET api/users
-
 router.get("/", (req, res) => {
   res.send("Users Route");
 });
-
-
 //@desc Register User
 //@routes POST api/users
 router.post(

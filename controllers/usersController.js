@@ -63,8 +63,7 @@ module.exports = {
       // payload is the body of the request
       const payload = {
         user: {
-          id: user.id,
-          email: user.email
+          id: user.id
         }
       };
 
@@ -73,12 +72,9 @@ module.exports = {
         process.env.jwtSecret,
         { expiresIn: 360000 },
         (err, token) => {
-            //console.log(token)
           if (err) throw err;
           res.json({ token });
         }
-        //decode the token
-
       );
       //   res.send("Successfully Registered");
     } catch (err) {
