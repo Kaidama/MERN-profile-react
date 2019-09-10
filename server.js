@@ -7,7 +7,10 @@ const app = express();
 
 // connect to MONGODB
 mongoose
-  .connect(process.env.MONGO_URI, { useNewUrlParser: true })
+  .connect(process.env.MONGO_URI, { 
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+   })
   .then(result =>
     console.log('Connected to MONGODB ATLAS')
   )
