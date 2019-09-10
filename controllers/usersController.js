@@ -32,7 +32,7 @@ module.exports = {
               let user = await User.findOne({ email })
 
               if(user){
-                  res.status(400).json({ errors: [{ msg: 'User already exists' }] });
+                 return res.status(400).json({ errors: [{ msg: 'User already exists' }] });
               }
               // generate avatar with user's email
               const avatar = gravatar.url(email, {
@@ -40,7 +40,7 @@ module.exports = {
                   r: 'pg',
                   d: 'retro'
               })
-              
+
               user = new User({
                   name, email, password, avatar
               })
