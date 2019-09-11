@@ -3,8 +3,9 @@ const { check, validationResult } = require("express-validator");
 const gravatar = require("gravatar");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-
 require("dotenv").config();
+
+
 module.exports = {
   validate: method => {
     switch (method) {
@@ -73,18 +74,19 @@ module.exports = {
         process.env.jwtSecret,
         { expiresIn: 360000 },
         (err, token) => {
-            //console.log(token)
+          //console.log(token)
           if (err) throw err;
           res.json({ token });
         }
-        //decode the token
+      )
+      //decode the token
 
-      );
       //   res.send("Successfully Registered");
     } catch (err) {
       console.log(`: `, err.message);
 
       res.status(500).send("Server Error");
     }
+    
   }
 };
