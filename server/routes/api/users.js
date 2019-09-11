@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const usersController = require('../controllers/usersController');
-const User = require('../models/User');
+const usersController = require('../../controllers/usersController');
+const User = require('../../models/User');
 
 
 //@desc test user route

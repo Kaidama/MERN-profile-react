@@ -3,13 +3,19 @@ Initialize
 MONGODB ATLAS
 
 1. create cluster
+2. set region
+3. set users
+4. connection string
 
 
 
 1. mkdir MERN-profile-react
-2. npm init
+2. mkdir server && cd server
+3. npm init
 3. .gitignore
 4. create server.js
+5. setup environment [express, mongoose]
+6. 
 
 
 

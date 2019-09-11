@@ -1,0 +1,22 @@
+{
+  "name": "mern-profile-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd server && npm run server\"  \"cd client && npm run client\""
+  }, 
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaidama/MERN-profile-react.git"
+  },
+  "author": "Jimmy Lai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kaidama/MERN-profile-react/issues"
+  },
+  "homepage": "https://github.com/Kaidama/MERN-profile-react#readme",
+  "dependencies": {
+    "concurrently": "^4.1.2"
+  }
+}
